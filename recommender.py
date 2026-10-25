@@ -18,3 +18,6 @@ def gen_recommendations(interests):
             careers += RULES[i]["careers"]
 
     return courses, projects, careers
+
+def get_available_interests():
+    return list(RULES.keys())

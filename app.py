@@ -1,7 +1,11 @@
 import streamlit as st
 
+
 # importing the gen_recommendations function
 from recommender import gen_recommendations
+
+#importing the get_available_interests function
+from recommender import get_available_interests
 
 #UI parts
 st.title("Pathly")
@@ -9,10 +13,12 @@ st.title("Pathly")
 #Short explenation for the user to show how and why to use the program
 st.caption("Do you struggle with finding relevant courses to grow your interests? Creating side project ideas? Or searching for potential career paths? Then wait no more! Select a topic, and we'll help you find a path forward!")
 
-#The different topic options a user can choose from: corispoding to rules.py
-interests = st.multiselect("Choose your interests:", 
-                           ["Machine Learning", "Data Science","Finance", "Backend Development", "Business Analysis"])
+#Getting a list of interests from RULES
+interest_list = get_available_interests()
 
+#The different topic options a user can choose from: corispoding to rules.py
+interests = st.multiselect("Choose your interests:", interest_list)
+#"Machine Learning", "Data Science","Finance", "Backend Development", "Business Analysis"
 
 #button to generate and show the recommended courses, projects, and careers
 if st.button("Generate My Path →"):

@@ -2,6 +2,10 @@
 
 Pathly is a career exploration application built with Python and Streamlit. It helps students discover relevant courses, project ideas, and potential career paths based on their interests.
 
+## 🎥 Demo
+Watch Pathly in action!
+[Watch the Pathly Demo](https://drive.google.com/file/d/1juVhH-F8nZFr-fLacpevJ0S92wJR8BKh/view?usp=sharing)
+
 ## Features
 - Select from multiple interest areas
 - View recommended courses
